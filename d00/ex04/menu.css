@@ -1,51 +1,67 @@
-body{
-  font-family: 'Lucida Sans';
+body {
+  font-family: Helvetica, sans-serif; font-size: 18px; line-height: 24px;
 }
 
-#title{
-  font-size: 5vw;
+nav {
+  margin: 100px auto;
   text-align: center;
-  font-style: italic;
 }
 
-.dropbtn {
-  background-color: #4CAF50;
-  color: darkred;
-  padding: 16px;
-  font-size: 4vw;
-  border: none;
-  border-radius: .9vw;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
+nav ul ul {
   display: none;
-  position: absolute;
-  background-color: lightgreen;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+  nav ul li:hover > ul {
+    display: block;
+  }
 
-.dropdown-content a:hover {
-  background-color: pink;
-}
 
-.dropdown:hover .dropdown-content {
-  display: block;
+nav ul {
+  background: #efefef;
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+  box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+  padding: 0 20px;
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
 }
+  nav ul li {
+    float: left;
+  }
+    nav ul li:hover {
+      background: #4b545f;
+      background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    }
+      nav ul li:hover a {
+        color: #fff;
+      }
 
-.dropdown:hover .dropbtn {
-  background-color: darkcyan;
-}
+    nav ul li a {
+      display: block; padding: 25px 40px;
+      color: #757575; text-decoration: none;
+    }
+
+
+  nav ul ul {
+    background: #5f6975; border-radius: 0px;
+    padding: 0;
+    position: absolute; top: 100%;
+  }
+    nav ul ul li {
+      float: none;
+      border-top: 1px solid #6b727c;
+      border-bottom: 1px solid #575f6a; position: relative;
+    }
+      nav ul ul li a {
+        padding: 15px 40px;
+        color: #fff;
+      }
+        nav ul ul li a:hover {
+          background: #4b545f;
+        }
+
+  nav ul ul ul {
+    position: absolute; left: 100%; top:0;
+  }
+

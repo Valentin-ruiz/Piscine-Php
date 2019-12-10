@@ -1,5 +1,5 @@
 body{
-  background-color: darkgrey;
+  background-color: #505050;
   margin: 18px 0xp 0px 8px
 }
 
@@ -104,7 +104,14 @@ aside img{
   margin-left: 35px;
   margin-top: 10px;
 }
-
+.brick {
+  background-image: url(resources/brick.jpg);
+  background-repeat: round;
+  width: 120px;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 70px;
+}
 .form{
   position: absolute;
   width: 500px;
@@ -121,7 +128,7 @@ aside img{
 }
 #entrez{
   font-family: "Georgia, 'Times New Roman', Times, serif";
-  font-size: 30px;
+  font-size: 35px;
   font: bolder;
 }
 
