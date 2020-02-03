@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balloon</title>
+</head>
+<body style="width: 90vw; height: 90vh;">
+  <div id="ballon" onclick="up()" onmouseleave="down()" style="background-color: red; width: 200px; height: 200px; margin: 200px auto; border-radius: 100px;">
+  </div>
+  <script type="text/javascript">
+    up = () => {
+      let color = document.getElementById("ballon").style.backgroundColor;
+      switch (color) {
+          case 'red':
+              document.getElementById("ballon").style.backgroundColor = "green";
+              break;
+          case 'green':
+              document.getElementById("ballon").style.backgroundColor = "blue";
+              break;
+          case 'blue':
+              document.getElementById("ballon").style.backgroundColor = "red";
+              break;
+      };
+      let width = parseInt(document.getElementById("ballon").style.width);
+      if (width >= 420) {
+        document.getElementById("ballon").style.width = "200px";
+        document.getElementById("ballon").style.height = "200px";
+      } else {
+        document.getElementById("ballon").style.width = width + 10 + "px";
+        document.getElementById("ballon").style.height = width + 10 + "px";
+        document.getElementById("ballon").style.borderRadius = width + 10 + "px";
+      }
+    };
+    down = () => {
+      let color = document.getElementById("ballon").style.backgroundColor;
+      switch (color) {
+          case 'red':
+              document.getElementById("ballon").style.backgroundColor = "blue";
+              break;
+          case 'green':
+              document.getElementById("ballon").style.backgroundColor = "red";
+              break;
+          case 'blue':
+              document.getElementById("ballon").style.backgroundColor = "green";
+              break;
+      };
+      let width = parseInt(document.getElementById("ballon").style.width);
+      if (width > 200) {
+        document.getElementById("ballon").style.width = width - 5 + "px";
+        document.getElementById("ballon").style.height = width - 5 + "px";
+        document.getElementById("ballon").style.borderRadius = width - 5 + "px";
+      }
+    };
+  </script>
+</body>
+</html>

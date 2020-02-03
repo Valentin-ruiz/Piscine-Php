@@ -1,0 +1,9 @@
+<?php
+/**
+ * Lannister
+ */
+class Lannister
+{
+
+}
+?>
